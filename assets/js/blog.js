@@ -36,18 +36,27 @@ function init() {
 
 init();
 
-const themeSwitcher = document.querySelector('#theme-switcher');
-const container = document.querySelector('.container');
 
+const themeSwitcher = document.querySelector('#theme-switcher');
+const entries = document.querySelector('.entries');
+const row = document.querySelector('.row');
+const container = document.querySelector('.container');
+ 
 let mode = 'light';
 
 themeSwitcher.addEventListener('click', function () {
   if (mode === 'light') {
     mode = 'dark';
+    entries.setAttribute('class', 'dark');
+    row.setAttribute('class', 'dark');
     container.setAttribute('class', 'dark');
   }
   else {
     mode = 'light';
+    entries.setAttribute('class', 'light');
+    row.setAttribute('class', 'light');
     container.setAttribute('class', 'light');
   }
 });
+
+

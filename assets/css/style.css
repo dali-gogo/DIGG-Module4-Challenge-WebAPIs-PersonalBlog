@@ -246,4 +246,9 @@
     margin: 20px;
   }
   
-  
+  h5 {
+    color: var(--violet);
+    text-align: center;
+    margin-top: 1%
+  }
+   

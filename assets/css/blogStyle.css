@@ -18,10 +18,10 @@
     background-color: var(--lilac);
   } */
   
-  body {
+  body {  
     font-family: 'Mulish', sans-serif;
     font-size: 30px;
-    background-color: var(--black);
+    /* background-color: var(--black); */
     margin: 0%;
   }
   
@@ -39,14 +39,23 @@
     font-size: 20px;
   }  
   
-  .custom-navbar {
+  .navbar {
     background-color: var(--violet);
     color: var(--lilac);
+    width: 100%;
+    text-align: right;
   }
   
+  #navbar {
+    background-color: var(--violet);
+    color: var(--lilac);
+    float: right;
+  }
+
   .custom-navbar a {
     font-size: 1.5rem;
     color: var(--white);
+    float: right;
   }
   
   .custom-navbar a:hover {
@@ -243,4 +252,9 @@
     border-style: solid;
   }
   
-  
+  h5 {
+    color: var(--violet);
+    text-align: center;
+    margin-top: 1%
+  }
+   
