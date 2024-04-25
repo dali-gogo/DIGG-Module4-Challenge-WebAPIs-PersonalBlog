@@ -1,73 +1,40 @@
-// const todoList = document.querySelector('#todo-list');
-// const todoCountSpan = document.querySelector('#todo-count');
+const todoList = document.querySelector('#todo-list');
 
-// console.log(todoList);
-// let todos = [];
+console.log(todoList);
+const todos = JSON.parse(localStorage.getItem("todos")) || [];
 
-// function renderTodos() {
-//   todoList.innerHTML = '';
-//   todoCountSpan.textContent = todos.length;
+function renderTodos() {
+  todoList.innerHTML = '';
 
-//   for (let i = 0; i < todos.length; i++) {
-//     const todo = todos[i];
+  for (let i = 0; i < todos.length; i++) {
+    const todo = todos[i];
+    const div = document.createElement('div');
+    div.classList.add("Post");
+    todoList.appendChild(div);
 
-//     const li = document.createElement('li');
-//     li.textContent = todo;
-//     li.setAttribute('data-index', i);
+    let h2 = document.createElement('h2');
+    h2.textContent = todo.todoText;
+    h2.setAttribute('data-index', i);
+    div.appendChild(h2);
 
-//     const button = document.createElement('button');
-//     button.textContent = 'Complete ✔️';
+    let h3 = document.createElement('h3');
+    h3.textContent = todo.titleText;
+    h3.setAttribute('data-index', i);
+    div.appendChild(h3);
 
-//     li.appendChild(button);
-//     todoList.appendChild(li);
-//   }
-// }
+    let p = document.createElement('p');
+    p.textContent = todo.entryText;
+    p.setAttribute('data-index', i);
+    div.appendChild(p);
+  }
+}
 
-// function init() {
-//   const storedTodos = JSON.parse(localStorage.getItem('todos'));
+function init() {
+  const storedTodos = JSON.parse(localStorage.getItem('todos'));
+  renderTodos();
+}
 
-//   if (storedTodos !== null) {
-//     todos = storedTodos;
-//   }
-
-//   renderTodos();
-// }
-
-// function storeTodos() {
-//   localStorage.setItem('todos', JSON.stringify(todos));
-// }
-
-// todoForm.addEventListener('submit', function (event) {
-//   event.preventDefault();
-
-//   const todoText = todoInput.value.trim();
-
-//   if (todoText === '') {
-//     return;
-//   }
-
-//   todos.push(todoText);
-//   todoInput.value = '';
-
-//   storeTodos();
-//   renderTodos();
-//   location.href = "blog.html"
-// });
-
-// console.log(todoList);
-// todoList.addEventListener('click', function (event) {
-//   const element = event.target;
-
-//   if (element.matches('button') === true) {
-//     const index = element.parentElement.getAttribute('data-index');
-//     todos.splice(index, 1);
-
-//     storeTodos();
-//     renderTodos();
-//   }
-// });
-
-// init();
+init();
 
 const themeSwitcher = document.querySelector('#theme-switcher');
 const container = document.querySelector('.container');
