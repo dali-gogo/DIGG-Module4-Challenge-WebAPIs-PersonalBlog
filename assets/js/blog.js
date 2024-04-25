@@ -1,8 +1,11 @@
+//defining the constants needed for the local storage
 const todoList = document.querySelector('#todo-list');
-
 console.log(todoList);
+
+//using parse to convert strings to objects
 const todos = JSON.parse(localStorage.getItem("todos")) || [];
 
+//append new elements to the array, considering user inputs
 function renderTodos() {
   todoList.innerHTML = '';
 
@@ -36,7 +39,7 @@ function init() {
 
 init();
 
-
+//constants to make the dark/light switch work
 const themeSwitcher = document.querySelector('#theme-switcher');
 const entries = document.querySelector('.entries');
 const row = document.querySelector('.row');
