@@ -15,12 +15,14 @@ buttonSubmit.addEventListener('click', function (event) {
   const entryText = entryInput.value.trim();
 
   if (todoText === '' || titleText === '' || entryText === '') {
+    alert("Please complete all the required fields.");
     return;
   }
-
+  else {
   todos.push({todoText:todoText,titleText:titleText,entryText:entryText});
   storeTodos();
   location.href = "blog.html";
+  }
 });
 
 const themeSwitcher = document.querySelector('#theme-switcher');
