@@ -246,9 +246,9 @@
     margin: 20px;
   }
   
-  h5 {
+  h5, h6 {
     color: var(--violet);
     text-align: center;
-    margin-top: 1%
+    margin-top: 1%;
   }
    
