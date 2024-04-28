@@ -14,22 +14,16 @@
     --black: #000000;
   }
   
-  /* ::selection {
-    color: var(--purple);
-    background-color: var(--lilac);
-  } */
-  
   /* define the fonts that will be used in the body*/
   body {  
     font-family: 'Mulish', sans-serif;
     font-size: 30px;
-    /* background-color: var(--black); */
-    margin: 0%;
+    margin: 5%!important;
   }
   
   /* prioritizing page width*/
   .container{
-    margin: 0%!important;
+    margin: 0%;
     width: 100%!important;
   }
 
@@ -71,12 +65,6 @@
     color: var(--lilac);
   }
 
-
-  .hero {
-    background-color: var(--lilac);
-    color: var(--violet);
-  }
-  
   .custom-btn {
     background-color: var(--purple);
     color: var(--white);
@@ -127,10 +115,6 @@
     text-decoration: none;
   }
   
-  p {
-    font-size: 20px;
-  }
-  
   .menu {
     width: 100%;
   }
@@ -153,7 +137,7 @@
     background-color:#243447;
     height: 100%;
     color: #bebebe;
-   
+    border: 2px solid #eceff1;  
   }
   
   .dark li a {
@@ -163,12 +147,14 @@
   .dark li a:hover {
     background-color: #111;
   }
-  
+
   /*Definition of the style for the light mode*/
   .light {
     background-color: var(--light);
     color: var(--violet);
     height: 100%;
+    padding: 0px;
+    border: 2px solid #eceff1;  
   }
   
   .light li a {
@@ -177,6 +163,10 @@
   
   .light li a:hover {
     background-color: rgb(29, 128, 210);
+  }
+
+  .light .card{
+    border: 1px solid #eceff1;
   }
   
   /*Style for the switch button*/
@@ -244,7 +234,7 @@
   
   /* Margin for the row and column classes*/
   .row {
-    margin: 20px;
+    margin: 0%;
     /* display: flex; */
   }
   
